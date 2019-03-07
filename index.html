@@ -38,7 +38,7 @@
 		</div>
 		<div class="row">
 			<h3>Skillset</h3>
-			<!--Use CSS grid system to set each of the icon divs equal to 1/4 of page width-->
+			<!--Use CSS grid system to create 2 rows & 4 columns-->
 			<div class="container-skills">
 				<i class="fab fa-html5"></i>
 				<i class="fab fa-css3-alt"></i>
@@ -52,8 +52,40 @@
 		</div>
 	</section>
 	<!--Projects Section-->
+	<section id="projects">
+		<div class="row">
+			<h2>Recent Projects</h2>
+			<div class="container-proj"> <!--Create CSS grid for projects: 3 columns, 2 rows-->
+				<div class="proj-card proj-yelp"> <!--Set screenshot of Yelp project as background of this div. Darken on hover-->
+					<p class="proj-desc">A bookstore rating web app modeled after Yelp.com</p> <!--Have this text only appear on hover-->
+				</div>
+				<div class="proj-card proj-face"> 
+					<p class="proj-desc">A React face recognition app</p> 
+				</div>
+				<div class="proj-card proj-robo"> 
+					<p class="proj-desc">A simple React app that allows you to search among robot characters</p> 
+				</div>
+				<div class="proj-card proj-landpage"> 
+					<p class="proj-desc">A landing page for a fictitious food delivery service</p> 
+				</div>
+				<div class="proj-card proj-rgb"> 
+					<p class="proj-desc">An RGB color guessing game built with JavaScript</p> 
+				</div>
+				<div class="proj-card proj-music">
+					<p class="proj-desc">Press any letter to see a dot and hear music. Built with JavaScript</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--Contact Section-->
 	<section>
-		
+		<div class="row">
+			<h2>Connect</h2>
+			<ul>
+				<li><a href="https://www.linkedin.com/in/martin-julia/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+				<li><a href="https://github.com/jmar90" target="_blank"><i class="fab fa-github-square"></i> GitHub</a></li>
+			</ul>
+		</div>
 	</section>
 </body>
 </html>
