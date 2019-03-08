@@ -141,17 +141,24 @@ header {
 
 .hero-text-box {
    position: absolute; /*Needs to be absolute in order to center both vertically and horizontally*/
-   width: 1140px;
+   width: 100%;
+   max-width: : 1140px;
    top: 50%;
    left: 50%;
    -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%); /*Translate element 1/2 of its width & height up to left & right*/
 }
 
+#arrow-link {
+   padding-bottom: 0;
+   border-bottom: 0;
+}
+
 #header-arrow {
 	position: absolute;
 	top: 90%;
 	left: 3%;
+   font-size: 150%;
 }
 
 /* MAIN NAV */
@@ -166,4 +173,23 @@ header {
 
 .main-nav li {
 	margin-right: 25px;
+}
+
+/* ----------------------------------------------------------- */
+/* ABOUT SECTION */
+/* ----------------------------------------------------------- */
+#about {
+   background-color: #f4f4f4; /*Subtle grey color*/
+}
+
+/* ----------------------------------------------------------- */
+/* PROJECTS SECTION */
+/* ----------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------- */
+/* CONTACT SECTION */
+/* ----------------------------------------------------------- */
+#contact {
+   background-color: #f4f4f4; 
 }
