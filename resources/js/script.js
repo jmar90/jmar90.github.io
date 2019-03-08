@@ -5,7 +5,7 @@ new TypeIt('#hero-header', {
   waitUntilVisible: true
 }).go();
 
-// Smooth scrolling when clicking on a tags
+// Smooth scrolling when clicking on anchor tags
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (event) {
         event.preventDefault();
