@@ -38,7 +38,7 @@ section {
 }
 
 /* ----- HEADINGS ----- */
-h1, h2, h3 {
+h1, h2 {
    font-weight: 300;
    text-transform: uppercase;
 }
@@ -62,11 +62,13 @@ h2 {
 }
 
 h3 {
-   font-size: 110%;
-   margin-bottom: 15px;
+   font-size: 120%;
+   font-weight: 300;
+   margin: 25px 0 15px 0;
+   text-align: center;
 }
 
-h1:after {
+h1:after { /*Use to add line after h1*/
 	display: block;
    height: 2px;
    width: 200px;
@@ -75,7 +77,7 @@ h1:after {
    margin: 30px auto 0 auto;
 }
 
-h2:after { /*Use to add line after h2*/
+h2:after { 
    display: block;
    height: 2px;
    width: 100px;
@@ -84,11 +86,20 @@ h2:after { /*Use to add line after h2*/
    margin: 30px auto 0 auto;
 }
 
+h3:after { 
+   display: block;
+   height: 1px;
+   width: 50px;
+   background-color: #00b894;
+   content: " ";
+   margin: 10px auto 0 auto;
+}
+
 /* ----- PARAGRAPHS ----- */
 .long-copy {
    line-height: 145%;
    width: 80%;
-   margin-left: 15%; /*To center paragraph box. Total width of screen = 100%; total width of paragraph = 70%. So, that leaves 30%. To center, we want 15% on the left & 15% on the right.*/
+   margin-left: 10%; /*To center paragraph box. Total width of screen = 100%; total width of paragraph = 80%. So, that leaves 20%. To center, we want 10% on the left & 10% on the right.*/
    text-align: center;
 }
 
@@ -196,6 +207,19 @@ header {
 /* ----------------------------------------------------------- */
 #about {
    background-color: #f4f4f4; /*Subtle grey color*/
+}
+
+.container-skills { /*Create grid for skills*/
+   margin-top: 25px;
+   margin-left: 10%;
+   width: 80%;
+
+   display: grid;
+   grid-gap: 20px;
+   grid-template-rows: repeat(2, 1fr);
+   grid-template-columns: repeat(4, 1fr);
+   justify-items: center;
+   align-items: center;
 }
 
 /* ----------------------------------------------------------- */
