@@ -18,7 +18,7 @@
 </head>
 <body>
 	<!--Header-->
-	<header>
+	<header id="top">
 		<!--Nav Bar-->
 		<nav>
 			<div class="row">
@@ -33,8 +33,8 @@
 		<div class="hero-text-box">
 			<h1 id="hero-header"></h1>
 		</div>
-		<a id="arrow-link" href="#about">
-			<i id="header-arrow" class="fas fa-angle-down"></i>
+		<a class="arrow-link" href="#about">
+			<i class="fas fa-angle-down down-arrow"></i>
 		</a>
 	</header>	
 	<!--About Section-->
@@ -89,12 +89,30 @@
 	<section id="contact">
 		<div class="row">
 			<h2>Contact</h2>
-			<ul>
-				<li><a href="https://www.linkedin.com/in/martin-julia/" target="_blank"><i class="fab fa-linkedin icon-small"></i> LinkedIn</a></li>
-				<li><a href="https://github.com/jmar90" target="_blank"><i class="fab fa-github-square icon-small"></i> GitHub</a></li>
+			<ul class="social-links">
+				<li>
+					<a href="https://www.linkedin.com/in/martin-julia/" target="_blank">
+						<i class="fab fa-linkedin icon-small"></i> LinkedIn
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/jmar90" target="_blank">
+						<i class="fab fa-github-square icon-small"></i> GitHub
+					</a>
+				</li>
 			</ul>
+			<div class="arrow-container">
+				<a class="arrow-link" href="#top">
+					<i class="fas fa-angle-up up-arrow"></i>
+				</a>
+			</div>
 		</div>
 	</section>
+	<footer>
+		<div class="row">
+			<p>Copyright &copy; 2019 Julia Martin. All rights reserved.</p>
+		</div>
+	</footer>
 	
 	<!--JS Script Tags-->
 	<!--TypeIt CDN link-->
