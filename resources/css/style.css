@@ -29,7 +29,7 @@ body {  /*Set default colors/font for entire page*/
 /* REUSABLE COMPONENTS */
 /* ----------------------------------------------------------- */
 .row {
-   max-width: 1140px; /*This will be the only absolute size*/
+  /* max-width: 1140px; */
    margin: 0 auto; /*Center all rows on page*/
 }
 
@@ -225,6 +225,64 @@ header {
 /* ----------------------------------------------------------- */
 /* PROJECTS SECTION */
 /* ----------------------------------------------------------- */
+/*Set up grid*/
+.container-proj {
+   width: 90%;
+   margin-left: 5%;
+
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 0;
+}
+
+.container-proj::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.container-proj > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+/*Style each box so that there is a background image with opacity that we can manipulate on hover*/
+.proj-box {
+   position: relative;
+   background-color: #000;
+   border: 1px solid #f7f7f7;
+   overflow: hidden;
+}
+
+.proj-box:after { /*Use :after pseudo-class to add background image (this will allow us to set opacity)*/
+   content: "";
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   opacity: 1;
+   background-image: url('img/placeholder.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 0;
+   background-size: cover;
+   transition: opacity 0.3s linear;
+}
+
+.proj-box:hover:after {
+   opacity: 0.2;
+}
+
+.proj-desc {
+   padding-top: 50%;
+   text-align: center;
+   color: #f7f7f7;
+}
 
 
 /* ----------------------------------------------------------- */
