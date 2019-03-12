@@ -143,6 +143,48 @@ a:active {
    border-bottom: 1px solid #555;
 }
 
+/* ----- ARROW LINKS ----- */
+.arrow-link {
+   padding-bottom: 0;
+   border-bottom: 0;
+}
+
+.down-arrow {
+   position: absolute;
+   top: 90%;
+   left: 3%;
+   font-size: 150%;
+
+   animation: bounce 2s infinite;
+   animation-delay: 3.2s;
+}
+
+.arrow-container {
+   position: relative;
+}
+
+.up-arrow {
+   position: absolute;
+   bottom: 0;
+   right: 3%;
+   font-size: 150%;
+
+   animation: bounce 2s infinite;
+}
+
+/*Animate arrow*/
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-20px);
+  }
+  60% {
+      transform: translateY(-10px);
+  }
+}
+
 /* ----------------------------------------------------------- */
 /* HEADER */
 /* ----------------------------------------------------------- */
@@ -158,34 +200,6 @@ header {
    left: 50%;
    -webkit-transform: translate(-50%, -50%);
    transform: translate(-50%, -50%); /*Translate element 1/2 of its width & height up to left & right*/
-}
-
-#arrow-link {
-   padding-bottom: 0;
-   border-bottom: 0;
-}
-
-#header-arrow {
-	position: absolute;
-	top: 90%;
-	left: 3%;
-   font-size: 150%;
-
-   animation: bounce 2s infinite;
-   animation-delay: 3.2s;
-}
-
-/*Animate arrow*/
-@keyframes bounce {
-   0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-  }
-  40% {
-      transform: translateY(-20px);
-  }
-  60% {
-      transform: translateY(-10px);
-  }
 }
 
 /* MAIN NAV */
@@ -291,3 +305,56 @@ header {
 #contact {
    background-color: #f4f4f4; 
 }
+
+.social-links {
+   margin-top: 50px;
+
+   display: flex;
+   list-style: none;
+   margin-top: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.social-links li {
+   margin-right: 25px;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+   text-decoration: none;
+   border: none;
+   transition: color 0.2s;
+}
+
+.social-links li a:hover,
+.social-links li a:active {
+   border: none;
+}
+
+.social-links li a:link i,
+.social-links li a:visited i {
+   transition: color 0.2s;
+}
+
+.social-links li a:hover i,
+.social-links li a:active i {
+   color: #555;
+}
+
+
+/* ----------------------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------------------- */
+footer {
+   background-color: #f4f4f4;
+   padding: 20px 20px 30px 0;
+}
+
+footer p {
+   text-align: right;
+   font-size: 80%;
+   color: #00b894;
+}
+
