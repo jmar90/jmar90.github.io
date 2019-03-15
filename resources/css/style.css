@@ -280,7 +280,8 @@ header {
    transition: color 0.2s;
 }
 
-.mobile-nav-icon i:hover {
+.mobile-nav-icon i:hover,
+.mobile-nav-icon i:active {
    color: var(--font-color);
 }
 
@@ -368,7 +369,8 @@ header {
    transition: opacity 0.3s linear;
 }
 
-.proj-box:hover:after {
+.proj-box:hover:after,
+.proj-box:active:after {
    opacity: 0.2;
 }
 
