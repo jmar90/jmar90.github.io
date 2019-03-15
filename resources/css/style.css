@@ -1,23 +1,28 @@
-/*
-	Mint color: #00b894
-*/
+/* ----------------------------------------------------------- */
+/* CSS VARIABLES  */
+/* ----------------------------------------------------------- */
+:root {
+   --accent-color: #00b894;
+   --font-color: #555;
+   --white-bg-color: #f7f7f7;
+   --grey-bg-color: #f4f4f4;
+}
 
 /* ----------------------------------------------------------- */
-/* BASIC SETUP */
+/* BASIC SETUP  */
 /* ----------------------------------------------------------- */
 
 * {  
    margin: 0;
    padding: 0;
-   -webkit-box-sizing: border-box;
    box-sizing: border-box;
 }
 
 html,
 body {  /*Set default colors/font for entire page*/
-   background-color: #f7f7f7;
-   color: #555;
-	font-family: 'Lato', sans-serif;
+   background-color: var(--white-bg-color);
+   color: var(--font-color);
+   font-family: 'Lato', sans-serif;
    font-weight: 300;
    font-size: 20px;
    text-rendering: optimizeLegibility; /*Optimize how fonts are rendered*/
@@ -69,10 +74,10 @@ h3 {
 }
 
 h1:after { /*Use to add line after h1*/
-	display: block;
+   display: block;
    height: 2px;
    width: 200px;
-   background-color: #00b894;
+   background-color: var(--accent-color);
    content: " ";
    margin: 30px auto 0 auto;
 }
@@ -81,7 +86,7 @@ h2:after {
    display: block;
    height: 2px;
    width: 100px;
-   background-color: #00b894;
+   background-color: var(--accent-color);
    content: " ";
    margin: 30px auto 0 auto;
 }
@@ -90,7 +95,7 @@ h3:after {
    display: block;
    height: 1px;
    width: 50px;
-   background-color: #00b894;
+   background-color: var(--accent-color);
    content: " ";
    margin: 10px auto 0 auto;
 }
@@ -107,7 +112,7 @@ h3:after {
 .icon-big {
    font-size: 350%;
    display: block;
-   color: #00b894;
+   color: var(--accent-color);
    margin-bottom: 10px;
 }
 
@@ -116,7 +121,7 @@ h3:after {
    width: 30px;
    height: auto;
    text-align: center;
-   color: #00b894;
+   color: var(--accent-color);
    font-size: 120%;
    margin-right: 10px;
 
@@ -129,18 +134,17 @@ h3:after {
 /* ----- LINKS ----- */
 a:link,
 a:visited {
-   color: #00b894;
+   color: var(--accent-color);
    text-decoration: none;
    padding-bottom: 1px;
    border-bottom: 1px solid transparent;
-   -webkit-transition: border-bottom 0.2s, color 0.2s;
    transition: border-bottom 0.2s, color 0.2s;
 }
 
 a:hover,
 a:active {
-   color: #555;
-   border-bottom: 1px solid #555;
+   color: var(--font-color);
+   border-bottom: 1px solid var(--font-color);
 }
 
 /* ----- ARROW LINKS ----- */
@@ -155,7 +159,9 @@ a:active {
    left: 3%;
    font-size: 150%;
 
+   -webkit-animation: bounce 2s infinite;
    animation: bounce 2s infinite;
+   -webkit-animation-delay: 3.2s;
    animation-delay: 3.2s;
 }
 
@@ -169,18 +175,37 @@ a:active {
    right: 3%;
    font-size: 150%;
 
+   -webkit-animation: bounce 2s infinite;
    animation: bounce 2s infinite;
 }
 
 /*Animate arrow*/
-@keyframes bounce {
+@-webkit-keyframes bounce {
    0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
       transform: translateY(0);
   }
   40% {
+      -webkit-transform: translateY(-20px);
       transform: translateY(-20px);
   }
   60% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+  40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+  }
+  60% {
+      -webkit-transform: translateY(-10px);
       transform: translateY(-10px);
   }
 }
@@ -204,23 +229,48 @@ header {
 
 /* MAIN NAV */
 .main-nav {
-	display: flex;
-	list-style: none;
-	margin-top: 20px;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	align-items: center;
+   display: flex;
+   list-style: none;
+   margin-top: 20px;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+   align-items: center;
 }
 
 .main-nav li {
-	margin-right: 25px;
+   margin-right: 25px;
+}
+
+/* MOBILE NAV */
+.mobile-nav-icon {
+   float: right;
+   margin-top: 20px;
+   cursor: pointer;
+   display: none;
+   padding-bottom: none;
+   border-bottom: none;
+}
+
+.mobile-nav-icon:hover {
+   padding-bottom: none;
+   border-bottom: none;
+}
+
+.mobile-nav-icon i {
+   font-size: 200%;
+   color: var(--accent-color);
+   transition: color 0.2s;
+}
+
+.mobile-nav-icon i:hover {
+   color: var(--font-color);
 }
 
 /* ----------------------------------------------------------- */
 /* ABOUT SECTION */
 /* ----------------------------------------------------------- */
 #about {
-   background-color: #f4f4f4; /*Subtle grey color*/
+   background-color: var(--grey-bg-color); /*Subtle grey color*/
 }
 
 .container-skills { /*Create grid for skills*/
@@ -228,9 +278,13 @@ header {
    margin-left: 10%;
    width: 80%;
 
+   display: -ms-grid;
+
    display: grid;
    grid-gap: 20px;
+   -ms-grid-rows: (1fr)[2];
    grid-template-rows: repeat(2, 1fr);
+   -ms-grid-columns: (1fr)[4];
    grid-template-columns: repeat(4, 1fr);
    justify-items: center;
    align-items: center;
@@ -244,8 +298,12 @@ header {
    width: 90%;
    margin-left: 5%;
 
+   display: -ms-grid;
+
    display: grid;
+   -ms-grid-columns: (1fr)[3];
    grid-template-columns: repeat(3, 1fr);
+   -ms-grid-rows: (1fr)[2];
    grid-template-rows: repeat(2, 1fr);
    grid-gap: 0;
 }
@@ -254,12 +312,16 @@ header {
   content: '';
   width: 0;
   padding-bottom: 100%;
+  -ms-grid-row: 1;
   grid-row: 1 / 1;
+  -ms-grid-column: 1;
   grid-column: 1 / 1;
 }
 
 .container-proj > *:first-child {
+  -ms-grid-row: 1;
   grid-row: 1 / 1;
+  -ms-grid-column: 1;
   grid-column: 1 / 1;
 }
 
@@ -267,7 +329,7 @@ header {
 .proj-box {
    position: relative;
    background-color: #000;
-   border: 1px solid #f7f7f7;
+   border: 1px solid var(--white-bg-color);
    overflow: hidden;
 }
 
@@ -293,9 +355,9 @@ header {
 }
 
 .proj-desc {
-   padding-top: 50%;
+   padding: 50% 2% 0 2%;
    text-align: center;
-   color: #f7f7f7;
+   color: var(--white-bg-color);
 }
 
 
@@ -303,7 +365,7 @@ header {
 /* CONTACT SECTION */
 /* ----------------------------------------------------------- */
 #contact {
-   background-color: #f4f4f4; 
+   background-color: var(--grey-bg-color); 
 }
 
 .social-links {
@@ -340,7 +402,7 @@ header {
 
 .social-links li a:hover i,
 .social-links li a:active i {
-   color: #555;
+   color: var(--font-color);
 }
 
 
@@ -348,13 +410,13 @@ header {
 /* FOOTER */
 /* ----------------------------------------------------------- */
 footer {
-   background-color: #f4f4f4;
+   background-color: var(--grey-bg-color);
    padding: 20px 20px 30px 0;
 }
 
 footer p {
    text-align: right;
    font-size: 80%;
-   color: #00b894;
+   color: var(--accent-color);
 }
 
