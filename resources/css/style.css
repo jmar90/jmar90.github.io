@@ -227,8 +227,8 @@ header {
    transform: translate(-50%, -50%); /*Translate element 1/2 of its width & height up to left & right*/
 }
 
-/* MAIN NAV */
-.main-nav {
+/* MAIN (FLEX) NAV */
+.flex-nav {
    display: flex;
    list-style: none;
    margin-top: 20px;
@@ -237,11 +237,29 @@ header {
    align-items: center;
 }
 
-.main-nav li {
+.flex-nav li {
    margin-right: 25px;
 }
 
 /* MOBILE NAV */
+.mobile-nav {
+   float: right; 
+   margin-top: 20px;
+   margin-left: 25px;
+}
+
+.mobile-nav li {
+   display: block;
+}
+
+.mobile-nav li a:link,
+.mobile-nav li a:visited {
+   display: block;
+   border: 0;
+   padding: 10px 0;
+   font-size: 100%;
+}
+
 .mobile-nav-icon {
    float: right;
    margin-top: 20px;
