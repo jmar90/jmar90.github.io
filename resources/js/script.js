@@ -61,4 +61,5 @@ document.addEventListener('click', function(event) {
 })
 
 header.addEventListener('mouseleave', closeMobileNav);
+
 window.addEventListener('scroll', closeMobileNav);

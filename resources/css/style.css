@@ -369,8 +369,7 @@ header {
    transition: opacity 0.3s linear;
 }
 
-.proj-box:hover:after,
-.proj-box:active:after {
+.proj-box:hover:after {
    opacity: 0.2;
 }
 
