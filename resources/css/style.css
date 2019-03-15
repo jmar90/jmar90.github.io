@@ -280,11 +280,6 @@ header {
    transition: color 0.2s;
 }
 
-.mobile-nav-icon i:link,
-.mobile-nav-icon i:visited {
-   color: var(--accent-color);
-}
-
 .mobile-nav-icon i:hover,
 .mobile-nav-icon i:active {
    color: var(--font-color);
