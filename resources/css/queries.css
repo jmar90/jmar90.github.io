@@ -38,29 +38,12 @@
 	}
     
    .row,
-   .hero-text-box { padding: 0 4%; }
-    
-	.main-nav { display: none; }
-   .mobile-nav-icon { display: inline-block; } 
-    
-   .main-nav { 
-      float: left; 
-      margin-top: 20px;
-      margin-left: 25px;
-   }
-    
-   .main-nav li { 
-      display: block; /*Force line break/make stacked*/
-   }    
-    
-   .main-nav li a:link,
-   .main-nav li a:visited {
-      display: block;
-      border: 0;
-      padding: 10px 0;
-      font-size: 100%;
-   }
-    
+   .hero-text-box { padding: 0 4%; }    
+
+   .flex-nav { display: none; }
+   
+   .mobile-nav-icon { display: inline-block; }
+
    .icon-big { 
       font-size: 300%; 
       margin-bottom: 5px;
