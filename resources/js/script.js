@@ -45,7 +45,7 @@ const mobileNav = () => {
 
 icon.addEventListener('click', mobileNav);
 
-// If someone clicks outside navbar/icon OR scrolls outside of header area, close nav menu
+// If someone clicks or touches (touchscreen) outside navbar/icon OR scrolls outside of header area, close nav menu
 const closeMobileNav = () => {
   nav.classList.add('flex-nav');
   nav.classList.remove('mobile-nav');
@@ -56,6 +56,13 @@ const closeMobileNav = () => {
 document.addEventListener('click', function(event) {
   let isClickInside = navIconComb.contains(event.target);
   if(!isClickInside){
+    closeMobileNav();
+  }
+})
+
+document.addEventListener('touchstart', function(event) {
+  let isTouchInside = navIconComb.contains(event.target);
+  if(!isTouchInside){
     closeMobileNav();
   }
 })

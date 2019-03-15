@@ -350,6 +350,7 @@ header {
    background-color: #000;
    border: 1px solid var(--white-bg-color);
    overflow: hidden;
+   cursor: pointer;
 }
 
 .proj-box:after { /*Use :after pseudo-class to add background image (this will allow us to set opacity)*/
