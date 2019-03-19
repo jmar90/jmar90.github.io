@@ -1,0 +1,461 @@
+/* ----------------------------------------------------------- */
+/* CSS VARIABLES  */
+/* ----------------------------------------------------------- */
+:root {
+   --accent-color: #00b894;
+   --font-color: #555;
+   --white-bg-color: #f7f7f7;
+   --grey-bg-color: #f4f4f4;
+}
+
+/* ----------------------------------------------------------- */
+/* BASIC SETUP  */
+/* ----------------------------------------------------------- */
+
+* {  
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {  /*Set default colors/font for entire page*/
+   background-color: var(--white-bg-color);
+   color: var(--font-color);
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 20px;
+   text-rendering: optimizeLegibility; /*Optimize how fonts are rendered*/
+   overflow-x: hidden; /*So text doesn't go off screen*/
+}
+
+
+/* ----------------------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* ----------------------------------------------------------- */
+.row {
+  /* max-width: 1140px; */
+   margin: 0 auto; /*Center all rows on page*/
+}
+
+section {
+   padding: 80px 0; /*We're using padding vs. margin to put space btwn the sections b/c some of our elements have background colors/images. If we used margin, there would be an ugly whitespace btwn the background colors/images -- padding allows for one background to juxtapose another while putting space between elements.*/
+}
+
+/* ----- HEADINGS ----- */
+h1, h2 {
+   font-weight: 300;
+   text-transform: uppercase;
+}
+
+h1 {
+   margin-top: 0; /*Normalize CSS automatically adds margin to top of h1*/
+   margin-bottom: 20px;
+   font-size: 240%; /*That is, 40px (200% of global font size listed in html)*/
+   word-spacing: 4px;
+   text-align: center;
+   letter-spacing: 1px;
+   text-transform: none;
+}
+
+h2 {
+   font-size: 180%;
+   word-spacing: 2px;
+   text-align: center;
+   margin-bottom: 30px;
+   letter-spacing: 1px;
+}
+
+h3 {
+   font-size: 120%;
+   font-weight: 300;
+   margin: 25px 0 15px 0;
+   text-align: center;
+}
+
+h1:after { /*Use to add line after h1*/
+   display: block;
+   height: 2px;
+   width: 200px;
+   background-color: var(--accent-color);
+   content: " ";
+   margin: 30px auto 0 auto;
+}
+
+h2:after { 
+   display: block;
+   height: 2px;
+   width: 100px;
+   background-color: var(--accent-color);
+   content: " ";
+   margin: 30px auto 0 auto;
+}
+
+h3:after { 
+   display: block;
+   height: 1px;
+   width: 50px;
+   background-color: var(--accent-color);
+   content: " ";
+   margin: 10px auto 0 auto;
+}
+
+/* ----- PARAGRAPHS ----- */
+.long-copy {
+   line-height: 145%;
+   width: 80%;
+   margin-left: 10%; /*To center paragraph box. Total width of screen = 100%; total width of paragraph = 80%. So, that leaves 20%. To center, we want 10% on the left & 10% on the right.*/
+   text-align: center;
+}
+
+/* ----- ICONS ----- */
+.icon-big {
+   font-size: 350%;
+   display: block;
+   color: var(--accent-color);
+   margin-bottom: 10px;
+}
+
+.icon-small {
+   display: inline-block;
+   width: 30px;
+   height: auto;
+   text-align: center;
+   color: var(--accent-color);
+   font-size: 120%;
+   margin-right: 10px;
+
+    /*Align text & icons*/
+   line-height: 120%;
+   vertical-align: middle;
+   margin-top: -3px; /*Will pull icons up 2px*/
+}
+
+/* ----- LINKS ----- */
+a:link,
+a:visited {
+   color: var(--accent-color);
+   text-decoration: none;
+   padding-bottom: 1px;
+   border-bottom: 1px solid transparent;
+   transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+   color: var(--font-color);
+   border-bottom: 1px solid var(--font-color);
+}
+
+/* ----- ARROW LINKS ----- */
+.arrow-link {
+   padding-bottom: 0;
+   border-bottom: 0;
+}
+
+.down-arrow {
+   position: absolute;
+   top: 90%;
+   left: 3%;
+   font-size: 150%;
+
+   -webkit-animation: bounce 2s infinite;
+   animation: bounce 2s infinite;
+   -webkit-animation-delay: 3.2s;
+   animation-delay: 3.2s;
+}
+
+.arrow-container {
+   position: relative;
+}
+
+.up-arrow {
+   position: absolute;
+   bottom: 0;
+   right: 3%;
+   font-size: 150%;
+
+   -webkit-animation: bounce 2s infinite;
+   animation: bounce 2s infinite;
+}
+
+/*Animate arrow*/
+@-webkit-keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+  40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+  }
+  60% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+  }
+}
+
+@keyframes bounce {
+   0%, 20%, 50%, 80%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+  }
+  40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+  }
+  60% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+  }
+}
+
+/* ----------------------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------------------- */
+header {
+   height: 100vh; /*100vh = 100% of viewport*/
+}
+
+.hero-text-box {
+   position: absolute; /*Needs to be absolute in order to center both vertically and horizontally*/
+   width: 100%;
+   max-width: : 1140px;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%); /*Translate element 1/2 of its width & height up to left & right*/
+}
+
+/* MAIN (FLEX) NAV */
+.flex-nav {
+   display: flex;
+   list-style: none;
+   margin-top: 20px;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.flex-nav li {
+   margin-right: 25px;
+}
+
+/* MOBILE NAV */
+.mobile-nav {
+   float: right; 
+   margin-top: 20px;
+   margin-left: 25px;
+}
+
+.mobile-nav li {
+   display: block;
+}
+
+.mobile-nav li a:link,
+.mobile-nav li a:visited {
+   display: block;
+   border: 0;
+   padding: 10px 0;
+   font-size: 100%;
+}
+
+.mobile-nav-icon {
+   float: right;
+   margin-top: 20px;
+   cursor: pointer;
+   display: none;
+   padding-bottom: none;
+   border-bottom: none;
+}
+
+.mobile-nav-icon:hover {
+   padding-bottom: none;
+   border-bottom: none;
+}
+
+.mobile-nav-icon i {
+   font-size: 200%;
+   color: var(--accent-color);
+   transition: color 0.2s;
+}
+
+.mobile-nav-icon i:hover,
+.mobile-nav-icon i:active {
+   color: var(--font-color);
+}
+
+/* ----------------------------------------------------------- */
+/* ABOUT SECTION */
+/* ----------------------------------------------------------- */
+#about {
+   background-color: var(--grey-bg-color); /*Subtle grey color*/
+}
+
+.container-skills { /*Create grid for skills*/
+   margin-top: 25px;
+   margin-left: 10%;
+   width: 80%;
+
+   display: -ms-grid;
+
+   display: grid;
+   grid-gap: 20px;
+   -ms-grid-rows: (1fr)[2];
+   grid-template-rows: repeat(2, 1fr);
+   -ms-grid-columns: (1fr)[4];
+   grid-template-columns: repeat(4, 1fr);
+   justify-items: center;
+   align-items: center;
+}
+
+/* ----------------------------------------------------------- */
+/* PROJECTS SECTION */
+/* ----------------------------------------------------------- */
+/*Set up grid*/
+.container-proj {
+   width: 90%;
+   margin-left: 5%;
+
+   display: -ms-grid;
+   display: grid;
+   -ms-grid-columns: (1fr)[3];
+   grid-template-columns: repeat(3, 1fr);
+   -ms-grid-rows: (1fr)[2];
+   grid-template-rows: repeat(2, 1fr);
+   grid-gap: 0;
+}
+
+.container-proj::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+.container-proj > *:first-child {
+  -ms-grid-row: 1;
+  grid-row: 1 / 1;
+  -ms-grid-column: 1;
+  grid-column: 1 / 1;
+}
+
+/*Style each box so that there is a background image with opacity that we can manipulate on hover*/
+.proj-box {
+   position: relative;
+   background-color: #000;
+   border: 1px solid var(--white-bg-color);
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.proj-box:after { /*Use :after pseudo-class to add background image (this will allow us to set opacity)*/
+   content: "";
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 1;
+   opacity: 1;
+   background-image: url('img/placeholder.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 0;
+   background-size: cover;
+   border: 1px solid var(--white-bg-color);
+   transition: opacity 0.3s linear;
+}
+
+.proj-box:hover:after {
+   opacity: 0.08;
+}
+
+#proj-rgb:after { background-image: url('img/rgb.jpg'); }
+#proj-patatap:after { background-image: url('img/patatap.jpg'); }
+
+/*Remove default styles from links; Style text*/
+.container-proj a:link,
+.container-proj a:visited {
+   color: #000;
+   text-decoration: none;
+   padding-bottom: 0;
+   border-bottom: none;
+   transition: none;
+}
+
+.container-proj a:hover,
+.container-proj a:active {
+   color: #000;
+   border-bottom: none;
+}
+
+.proj-desc {
+   padding: 50% 2% 0 2%;
+   text-align: center;
+   color: var(--white-bg-color);
+}
+
+
+/* ----------------------------------------------------------- */
+/* CONTACT SECTION */
+/* ----------------------------------------------------------- */
+#contact {
+   background-color: var(--grey-bg-color); 
+}
+
+.social-links {
+   margin-top: 50px;
+
+   display: flex;
+   list-style: none;
+   margin-top: 20px;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.social-links li {
+   margin-right: 25px;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+   text-decoration: none;
+   border: none;
+   transition: color 0.2s;
+}
+
+.social-links li a:hover,
+.social-links li a:active {
+   border: none;
+}
+
+.social-links li a:link i,
+.social-links li a:visited i {
+   transition: color 0.2s;
+}
+
+.social-links li a:hover i,
+.social-links li a:active i {
+   color: var(--font-color);
+}
+
+
+/* ----------------------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------------------- */
+footer {
+   background-color: var(--grey-bg-color);
+   padding: 20px 20px 30px 0;
+}
+
+footer p {
+   text-align: right;
+   font-size: 80%;
+   color: var(--accent-color);
+}
+
