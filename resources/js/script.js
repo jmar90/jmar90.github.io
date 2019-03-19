@@ -23,11 +23,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// If someone clicks on hamburger menu icon, show mobile nav
+// If someone clicks on the hamburger menu icon, show mobile nav
 const icon = document.querySelector('.mobile-nav-icon i');
 const nav = document.querySelector('#nav');
 const navIconComb = document.querySelector('nav .row');
-const header = document.querySelector('header');
 
 const mobileNav = () => {
   if(icon.classList.contains('fa-bars') && nav.classList.contains('flex-nav')){
@@ -45,7 +44,7 @@ const mobileNav = () => {
 
 icon.addEventListener('click', mobileNav);
 
-// If someone clicks/touches (touchscreen) outside navbar/icon OR scrolls outside of header area, close nav menu
+// Set Event Listeners for When Mobile Nav Menu Should Close
 const closeMobileNav = () => {
   nav.classList.add('flex-nav');
   nav.classList.remove('mobile-nav');
@@ -53,20 +52,22 @@ const closeMobileNav = () => {
   icon.classList.remove('fa-times');
 }
 
-document.addEventListener('click', function(event) {
+document.addEventListener('click', function(event) {  //If you click outside menu, close menu
   let isClickInside = navIconComb.contains(event.target);
   if(!isClickInside){
     closeMobileNav();
   }
 })
 
-document.addEventListener('touchstart', function(event) {
+document.addEventListener('touchstart', function(event) {  //If you touch outside menu, close it
   let isTouchInside = navIconComb.contains(event.target);
   if(!isTouchInside){
     closeMobileNav();
   }
 })
 
-header.addEventListener('mouseleave', closeMobileNav);
+navIconComb.addEventListener('mouseleave', () => {  //If mouse leaves menu, close after 550 ms
+  setTimeout(closeMobileNav, 550);
+});
 
-window.addEventListener('scroll', closeMobileNav);
+window.addEventListener('scroll', closeMobileNav);  //If you scroll, close menu

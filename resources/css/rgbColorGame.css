@@ -1,0 +1,159 @@
+/* ----------------------------------------------------------- */
+/* BASIC SETUP  */
+/* ----------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #ededed;
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+
+/* ----------------------------------------------------------- */
+/* HEADER */
+/* ----------------------------------------------------------- */
+header {
+    background-color: #ededed;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 240%; 
+    word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* ----------------------------------------------------------- */
+/* BUTTON RIBBON */
+/* ----------------------------------------------------------- */
+.btnRibbon {
+    height: 40px;
+    background-color: #f7f7f7;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-right: 25px;
+    padding: 0 8px;
+    height: 100%;
+    font-size: 80%;
+    letter-spacing: 0.8px;
+    border: none;
+    background: none;
+    transition: all 0.4s;
+        -webkit-transition: all 0.4s;
+        -moz--webkit-transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+.button-hover:hover {
+    color: #f7f7f7;
+    background-color: #555;
+}
+
+#message {
+    cursor: default;
+    transition: none;
+}
+
+.icon-small {
+   display: inline-block;
+   height: auto;
+   text-align: center;
+
+   /*Align text & icons*/
+   line-height: 120%;
+   vertical-align: middle;
+   margin-top: -3px; /*Will pull icons up 2px*/
+}
+
+/* ----------------------------------------------------------- */
+/* CIRCLES */
+/* ----------------------------------------------------------- */
+#container {
+    max-width: 600px;
+    margin: 20px auto; 
+}
+
+.circle {
+    background-color: #555;
+    float: left;
+    width: 22%;
+    margin: 1.5%; 
+    padding-bottom: 22%;
+    border-radius: 50%; 
+    box-shadow: 0.4px 0.4px 2px rgba(37, 35, 35, 0.3),
+                -0.4px -0.4px 2px rgba(37, 35, 35, 0.3);
+    transition: background 0.6s;
+    -webkit-transition: background 0.6s;
+    -moz--webkit-transition: background 0.6s;
+    outline: none;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: #555;
+    color: #f7f7f7;
+}
+
+.center {
+    float: left;
+    width: 30%;
+    margin: 1.66%; 
+    padding-bottom: 30%;
+}
+
+/* ----------------------------------------------------------- */
+/* QUERIES */
+/* ----------------------------------------------------------- */
+@media only screen and (max-width: 600px) { 
+   body { font-size: 16px; }
+   header { padding: 30px 0; }
+   h1 { margin-bottom: 15px; }
+   p { margin-bottom: 15px; }
+   button { 
+        margin-right: 15px; 
+        letter-spacing: 0.5px;
+    }
+
+    #container {
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body { font-size: 14px; }
+    header { padding: 25px 0; }
+    h1 { margin-bottom: 10px; }
+    p { margin-bottom: 10px; }
+    button { margin-right: 12px; }
+}
