@@ -1,0 +1,21 @@
+canvas {
+    width: 100%;  /*Take up 100% of screen width*/
+    height: 100%;
+    background: #000;
+}
+
+body, html {
+    height: 100%;  /*Have body take up full screen to prevent any annoying margins on side*/
+    margin: 0;
+    background: #000;
+    text-rendering: optimizeLegibility;
+}
+
+h1 {
+	margin: 2% auto;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-size: 25px;
+	font-weight: 400;
+	color: #f7f7f7;
+}
