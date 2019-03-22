@@ -362,7 +362,7 @@ header {
    height: 100%;
    z-index: 1;
    opacity: 1;
-   background-image: url('img/placeholder.jpg');
+   /*background-image: url('img/placeholder.jpg');*/
    background-repeat: no-repeat;
    background-position: 50% 0;
    background-size: cover;
@@ -371,7 +371,7 @@ header {
 }
 
 .proj-box:hover:after {
-   opacity: 0.08;
+   opacity: 0.1;
 }
 
 #proj-rgb:after { background-image: url('img/rgb.jpg'); }
