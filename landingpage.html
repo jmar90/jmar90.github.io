@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Julia's Cookies delivers fresh, homemade cookies to you fast.">
+    
+    <link rel="stylesheet" type="text/css" href="./vendors/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./vendors/css/grid.css">
+    <link rel="stylesheet" href="./vendors/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./resources/landingPage/css/landingPage.css">
+    <link rel="stylesheet" type="text/css" href="./resources/landingPage/css/landingPage_queries.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    
+    <title>Julia's Cookies</title>
+    
+    <!--Code for favicons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./resources/landingPage/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/landingPage/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./resources/landingPage/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./resources/landingPage/favicons/site.webmanifest">
+    <link rel="mask-icon" href="./resources/landingPage/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="row"> <!--Use row to center navbar-->
+                <ul class="main-nav js--main-nav">
+                    <li><a href="#features">About</a></li>
+                    <li><a href="#works">How it works</a></li>
+                    <li><a href="#cities">Our cities</a></li>
+                    <li><a href="#plans">Sign up</a></li>
+                </ul>
+                <a class="mobile-nav-icon js--nav-icon"><i class="fas fa-bars"></i></a>
+            </div>
+        </nav>
+        <div class="hero-text-box"> <!--Hero refers to large background image-->
+            <h1 class="h1-comp-name">Julia's Cookies</h1>
+            <h1>Fresh cookies fast</h1>
+            <a class="btn btn-full js--scroll-to-plan" href="#">Cookie me</a>
+            <a class="btn btn-ghost js--scroll-to-start" href="#">Tell me more</a>
+        </div>
+    </header>
+
+
+    <section class="section-features js--section-features" id="features">
+        <div class="row"> 
+            <h2>Homemade cookies &mdash;<br class="line-break"> no oven required</h2> 
+            <p class="long-copy">
+                Hi, I'm Julia, and I want to share my homemade cookies with you! For most of us, made-from-scratch cookies are something that we love but simply don't have the time to make. Well, that's where I (and the rest of the bakers at Julia's Cookies) come in. We'll bake the cookies for you and then deliver them straight to your door.
+            </p>
+        </div>
+        <div class="row js--wp-1"> <!--Build grid system using Responsive Grid System (grid.css file)-->
+            <div class="col span-1-of-4 box">
+                <i class="fas fa-calendar-alt icon-big"></i>
+                <h3>365 Days/Year</h3>
+                <p>
+                    Eat homemade cookies every single day without ever having to crack open your oven. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="fas fa-clock icon-big"></i>
+                <h3>Ready in 30 minutes</h3>
+                <p>
+                    You're only thirty minutes away from hot, straight out of the oven cookies. We work with the best bakers in each city to ensure that you receive delicious cookies quickly.
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="fas fa-cookie icon-big"></i>
+                <h3>100% organic</h3>
+                <p>
+                    We use only organic, locally sourced ingredients in our cookies! All of the dairy products that go into our cookies come from pasture-raised, antibiotic-free animals. 
+                </p>
+            </div>
+            <div class="col span-1-of-4 box">
+                <i class="fas fa-shopping-basket icon-big"></i>
+                <h3>Order anything</h3>
+                <p>
+                    But really, order whatever combination of cookies you like. Mix and match cookie flavors to your heart's content!
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-meals">
+        <ul class="meals-showcase"> 
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/1.jpg" alt="Chocolate chip cookies">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/2.jpg" alt="Oatmeal cookies">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/3.jpg" alt="Assorted macarons">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/4.jpg" alt="Heart shaped chocolate chip cookies">
+                </figure>
+            </li>           
+        </ul>
+        <ul class="meals-showcase clearfix"> 
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/5.jpg" alt="Chocolate filled macarons">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/6.jpg" alt="Assorted meringue cookies">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/7.jpg" alt="Brownie cookies">
+                </figure>
+            </li>
+            <li>
+                <figure class="meal-photo">
+                    <img src="./resources/landingPage/img/8.jpg" alt="Star shaped cookies">
+                </figure>
+            </li>           
+        </ul>
+    </section>
+    <section class="section-steps" id="works">
+        <div class="row">
+            <h2>How it works &mdash;<br class="line-break"> Easy as 1, 2, 3</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-2 steps-box">
+                <img src="./resources/landingPage/img/app-iPhone.png" alt="Omnifood app on iPhone" class="app-screen js--wp-2">
+            </div>
+            <div class="col span-1-of-2 steps-box">
+                <div class="works-step">
+                    <div>1</div>
+                    <p>Choose the subscription plan that best fits your needs and sign up today.</p>
+                </div>
+                <div class="works-step">
+                    <div>2</div>
+                    <p>Order your fresh cookies using our mobile app or website.</p>
+                </div>
+                <div class="works-step">
+                    <div>3</div>
+                    <p>Have your cookies delievered in less than 30 minutes. Enjoy with a glass of milk!</p>
+                </div>
+                <div class="btn-app-container">
+                    <a href="#" class="btn-app">
+                        <img src="./resources/landingPage/img/download-app.svg" alt="App Store Button">
+                    </a>
+                    <a href="#" class="btn-app">
+                        <img src="./resources/landingPage/img/download-app-android.png" alt="Play Store Button">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-cities" id="cities">
+        <div class="row">
+            <h2>We're currently in these cities</h2>
+        </div>
+        <div class="row js--wp-3">
+            <div class="col span-1-of-4 box">
+                <img src="./resources/landingPage/img/hobart.jpg" alt="Hobart Bay">
+                <h3>Hobart Bay, AK</h3>
+                <div class="city-feature">
+                    <i class="fas fa-user icon-small"></i>
+                    1 happy eater
+                </div>
+                <div class="city-feature">
+                    <i class="fas fa-star icon-small"></i>
+                    1 cookie baker
+                </div>
+                <div class="city-feature">
+                    <i class="fab fa-twitter icon-small"></i>
+                    <a href="#">@cookies_hobart</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="./resources/landingPage/img/gosnold.jpg" alt="Gosnold">
+                <h3>Gosnold, MA</h3>
+                <div class="city-feature">
+                    <i class="fas fa-user icon-small"></i>
+                    75 happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="fas fa-star icon-small"></i>
+                    2 cookie bakers
+                </div>
+                <div class="city-feature">
+                    <i class="fab fa-twitter icon-small"></i>
+                    <a href="#">@cookies_gosnold</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="./resources/landingPage/img/hinsdale.jpg" alt="Berlin">
+                <h3>Hinsdale, NH</h3>
+                <div class="city-feature">
+                    <i class="fas fa-user icon-small"></i>
+                    500 happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="fas fa-star icon-small"></i>
+                    5 cookie bakers
+                </div>
+                <div class="city-feature">
+                    <i class="fab fa-twitter icon-small"></i>
+                    <a href="#">@cookies_hinsdale</a>
+                </div>
+            </div>
+            <div class="col span-1-of-4 box">
+                <img src="./resources/landingPage/img/tavistock.jpg" alt="Tavistock">
+                <h3>Tavistock, NJ</h3>
+                <div class="city-feature">
+                    <i class="fas fa-user icon-small"></i>
+                    5 happy eaters
+                </div>
+                <div class="city-feature">
+                    <i class="fas fa-star icon-small"></i>
+                    1 cookie baker
+                </div>
+                <div class="city-feature">
+                    <i class="fab fa-twitter icon-small"></i>
+                    <a href="#">@cookies_tavistock</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-testimonials">
+        <div class="row">
+            <h2>Our customers love us!</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <blockquote>
+                    Julia's Cookies is the best! Whenever I find myself working late in the office, I make sure to order some chocolate chip & snickerdoodle cookies!
+                    <cite><img src="./resources/landingPage/img/customer-1.jpg" alt="Customer 1 image">Fitz Darcy</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    I hate to bake, but I love cookies. So, when I heard about Julia's Cookies, I was so excited. Cookies without the kitchen mess?! Yes, please!
+                    <cite><img src="./resources/landingPage/img/customer-2.jpg" alt="Customer 2 image">Liz Bennet</cite>
+                </blockquote>
+            </div>
+            <div class="col span-1-of-3">
+                <blockquote>
+                    I recently forgot a friend's birthday, so I had no gifts or cake to give them. Enter Julia's Cookies. I ordered cookies online, received them in 30 minutes, and gave them to my friend, who was none the wiser that I totally forgot their birthday.
+                    <cite><img src="./resources/landingPage/img/customer-3.jpg" alt="Customer 3 image">George Wickham</cite>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <section class="section-plans js--section-plans" id="plans">
+        <div class="row">
+            <h2>Get your cookie groove on today</h2>
+        </div>
+        <div class="row">
+            <div class="col span-1-of-3">
+                <div class="plan-box js--wp-4"> <!--Add plan-box div so that we can adjust width of plan info (make 90% of column) & also change background color to white-->
+                    <div>
+                        <h3>Premium</h3>
+                        <p class="plan-price">$350 <span class="plan-time">/ month</span></p>
+                        <p class="plan-price-meal">That's less than $1 per cookie</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><i class="fas fa-check icon-small"></i>1 dozen cookies each day</li>
+                            <li><i class="fas fa-check icon-small"></i>Order 24/7</li>
+                            <li><i class="fas fa-check icon-small"></i>Access to our newest recipes</li>
+                            <li><i class="fas fa-check icon-small"></i>Free delivery</li>
+                        </ul>
+                    </div>
+                    <div>
+                       <a href="#" class="btn btn-full">Sign up now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-3">
+                <div class="plan-box">
+                    <div>
+                        <h3>Pro</h3>
+                        <p class="plan-price">$72 <span class="plan-time">/ month</span></p>
+                        <p class="plan-price-meal">That's only $1.50 per cookie</p>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><i class="fas fa-check icon-small"></i>1 dozen cookies each week</li>
+                            <li><i class="fas fa-check icon-small"></i>Order 24/7</li>
+                            <li><i class="fas fa-check icon-small"></i>Access to our newest recipes</li>
+                            <li><i class="fas fa-check icon-small"></i>Free delivery</li>
+                        </ul>
+                    </div>
+                    <div>
+                       <a href="#" class="btn btn-ghost">Sign up now</a> 
+                    </div>
+                </div>
+            </div>
+            <div class="col span-1-of-3">
+                <div class="plan-box">
+                    <div>
+                        <h3>Starter</h3>
+                        <p class="plan-price">$24 <span class="plan-time">/ dozen cookies</span></p>
+                        <p class="plan-price-meal">&nbsp;</p> 
+                    </div>
+                    <div>
+                        <ul>
+                            <li><i class="fas fa-check icon-small"></i>1 dozen cookies</li>
+                            <li><i class="fas fa-check icon-small"></i>Order 24/7</li>
+                            <li><i class="fas fa-times icon-small"></i></li>
+                            <li><i class="fas fa-times icon-small"></i></li>
+                        </ul>
+                    </div>
+                    <div>
+                       <a href="#" class="btn btn-ghost">Sign up now</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-form">
+        <div class="row">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="row">
+            <form method="POST" action="#" class="contact-form">
+                <div class="row">
+                    <div class="col span-1-of-3"> <!--Want 1st col smaller-->
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="text" name="name" id="name" placeholder="Your name" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3"> 
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="email" name="email" id="email" placeholder="Your email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3"> 
+                        <label for="find-us">How did you find us?</label>
+                    </div>
+                    <div class="col span-2-of-3">
+                        <select name="find-us" id="find-us">
+                            <option value="friends" selected>Friends</option>
+                            <option value="search">Search engine</option>
+                            <option value="ad">Ad</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                       <label for="newsletter">Newsletter?</label>    
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="checkbox" name="newsletter" id="newsletter" checked> Yes
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                       <label for="message">Drop us a line</label>    
+                    </div>
+                    <div class="col span-2-of-3">
+                        <textarea name="message" id="message" placeholder="Your message"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col span-1-of-3">
+                       <label>&nbsp;</label>    
+                    </div>
+                    <div class="col span-2-of-3">
+                        <input type="submit" value="Send it!"> <!--Value = text that appears on submit button-->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="row">
+            <div class="col span-1-of-2">
+                <ul class="footer-nav">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Press</a></li>
+                    <li><a href="#">iOS App</a></li>
+                    <li><a href="#">Android App</a></li>
+                </ul>
+            </div>
+            <div class="col span-1-of-2">
+                <ul class="social-links"> 
+                    <li><a href="#"><i class="fab fa-facebook-square icon-fb"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-square icon-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram icon-insta"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <p>Copyright &copy; 2019 Julia's Cookies. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!--JS files for making website compatible with older browsers-->
+    <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    
+    <!-- Our scripts should always be the last script listed-->
+    <script src="./resources/landingPage/js/landingPage.js"></script>
+</body> 
+</html> 
+
+
