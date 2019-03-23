@@ -376,6 +376,10 @@ header {
 
 #proj-rgb:after { background-image: url('img/rgb.jpg'); }
 #proj-patatap:after { background-image: url('img/patatap.jpg'); }
+#proj-landpage:after { 
+   background-image: url('img/landing-pg.jpg'); 
+   background-position: 0 0;
+}
 
 /*Remove default styles from links; Style text*/
 .container-proj a:link,
