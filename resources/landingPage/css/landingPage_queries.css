@@ -150,4 +150,6 @@
     .contact-form { width: 100%; }
     
     .line-break { display: block; }
+
+    .meals-showcase li { width: 50%; }
 }
