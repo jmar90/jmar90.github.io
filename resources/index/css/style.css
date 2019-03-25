@@ -380,6 +380,7 @@ header {
    background-image: url('img/landing-pg.jpg'); 
    background-position: 0 0;
 }
+#proj-robo:after { background-image: url('img/robofriends.jpg'); }
 
 /*Remove default styles from links; Style text*/
 .container-proj a:link,
