@@ -404,6 +404,8 @@ header {
    color: var(--white-bg-color);
 }
 
+.subscript { font-size: 70%; }
+
 
 /* ----------------------------------------------------------- */
 /* CONTACT SECTION */
