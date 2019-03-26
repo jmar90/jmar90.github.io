@@ -381,6 +381,7 @@ header {
    background-position: 0 0;
 }
 #proj-robo:after { background-image: url('img/robofriends.jpg'); }
+#proj-face:after { background-image: url('img/face-recog.jpg'); }
 
 /*Remove default styles from links; Style text*/
 .container-proj a:link,
@@ -404,7 +405,7 @@ header {
    color: var(--white-bg-color);
 }
 
-.subscript { font-size: 65%; }
+.subscript { font-size: 60%; }
 
 
 /* ----------------------------------------------------------- */
