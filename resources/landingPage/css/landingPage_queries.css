@@ -8,7 +8,6 @@
     .row { padding: 0 2%; }
 }
 
-
 /* SMALL TABLET TO BIG TABLET: from 768px to 1023px */
 @media only screen and (max-width: 1023px) { 
     body { font-size: 18px; } /*Since we only specified the font-size for body as px & all other font sizes as %, all font sizes will auto update if we just change the body font size*/
@@ -50,6 +49,11 @@
     :-moz-placeholder { font-size: 18px; }
 }
 
+/* SCREENS LARGER THAN PHONES 
+   (to ensure main-nav reappears after the mobile nav is activated & screen is resized) */
+@media screen and (min-width: 768px) {
+       .main-nav { display:block !important; }
+}
 
 /* PHONES TO SMALL TABLETS: from 481px to 767px */
 @media only screen and (max-width: 767px) { 
