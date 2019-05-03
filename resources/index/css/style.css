@@ -382,6 +382,7 @@ header {
 }
 #proj-robo:after { background-image: url('img/robofriends.jpg'); }
 #proj-face:after { background-image: url('img/face-recog.jpg'); }
+#proj-bookly:after { background-image: url('img/bookly.jpg') }
 
 /*Remove default styles from links; Style text*/
 .container-proj a:link,

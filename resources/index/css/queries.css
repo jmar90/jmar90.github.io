@@ -23,19 +23,19 @@
    h2 { font-size: 150%; }
 
    h1:after { 
-	   width: 130px;
-	   margin: 20px auto 0 auto;
-	}
+      width: 130px;
+      margin: 20px auto 0 auto;
+   }
 
-	h2:after { 
-	   width: 55px;
-	   margin: 15px auto 0 auto;
-	}
+   h2:after { 
+      width: 55px;
+      margin: 15px auto 0 auto;
+   }
 
-	h3:after { 
-	   width: 30px;
-	   margin: 10px auto 0 auto;
-	}
+   h3:after { 
+      width: 30px;
+      margin: 10px auto 0 auto;
+   }
     
    .row,
    .hero-text-box { padding: 0 4%; }    
@@ -55,8 +55,8 @@
    }
 
    .container-skills {
-   	width: 90%;
-   	margin-left: 5%;
+      width: 90%;
+      margin-left: 5%;
    }
 
    .proj-desc { padding: 35% 4% 0 4%; }
@@ -68,25 +68,25 @@
     h1 { font-size: 160%; }
     h2 { font-size: 140%; }
 
-	h2:after { margin: 10px auto 0 auto; }
+   h2:after { margin: 10px auto 0 auto; }
 
-	h3:after { 
-	   width: 30px;
-	   margin: 10px auto 0 auto;
-	}
+   h3:after { 
+      width: 30px;
+      margin: 10px auto 0 auto;
+   }
 
-	.container-skills {
-   	width: 100%;
-   	margin-left: 0%;
+   .container-skills {
+      width: 100%;
+      margin-left: 0%;
    }
 
    .container-proj {  
-   	width: 100%;
-	   margin-left: 0%;
-	   -ms-grid-columns: (1fr)[2];
-	   grid-template-columns: repeat(2, 1fr);
-	   -ms-grid-rows: (1fr)[3];
-	   grid-template-rows: repeat(3, 1fr);
+      width: 100%;
+      margin-left: 0%;
+      -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
    }
 
    .proj-desc { padding: 40% 4% 0 4%; }
